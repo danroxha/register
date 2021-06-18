@@ -1,0 +1,22 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 20% auto auto;
+}
+
+.base-content {
+    background-color: blue;
+}
+
+.base-header {
+    background-color: red;
+    display: flex;
+}
+
+.base-header .logo {
+    width: 100px;
+}
+
+.base-footer {
+    background-color: green;
+}
