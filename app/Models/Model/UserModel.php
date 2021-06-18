@@ -15,17 +15,17 @@ class UserModel extends Model
     protected $connection = 'mysql';
     protected $table = 'user';
 
-    public static function list(int $limit) {
-        $sql = self::select([
+    public static function list(int $limit = 15) {
+        return self::select([
             'id',
             'name',
             'email',
             'password',
             'at_create'
         ])
-        ->limit($limit);
-
-        dd($sql->toSql());
+        ->limit($limit)
+        ->get();
+        //dd($sql->toSql());
     }
 
     public static function register(Request $request) {
