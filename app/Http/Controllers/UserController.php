@@ -20,8 +20,10 @@ class UserController extends Controller
             'password' => 'required|min:8'
         ]);
 
-        UserModel::register($request);
+        if(!UserModel::register($request)) {
+            return view('user.error');
+        }
 
-        return view('user.sucess');
+        return view('user.sucess', ['user' => $request->input('name')]);
     }
 }
