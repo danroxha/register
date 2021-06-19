@@ -28,7 +28,7 @@ class UserModel extends Model
     }
 
     public static function register(Request $request) {
-        $sql = self::insert([
+        return self::insert([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password'))
