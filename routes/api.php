@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\User;
 use App\Models\Model\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,7 +26,5 @@ Route::prefix('v1')->group(function() {
         return UserModel::list();
     });
 
-    Route::post('register', function() {
-        return ['not implements'];
-    });
+    Route::post('register', [User::class, 'save']);
 });
