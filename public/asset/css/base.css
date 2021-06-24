@@ -5,12 +5,18 @@
 }
 
 .base-content {
-    background-color: blue;
 }
 
 .base-header {
-    background-color: red;
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% auto;
+    border-bottom: 1px solid rgb(200, 190, 190);
+    padding: 0;
+    margin: 0;
+}
+.base-header h1 {
+    padding: 20px;
+    height: 100%;
 }
 
 .base-header .logo {
@@ -18,5 +24,12 @@
 }
 
 .base-footer {
-    background-color: green;
+    border-top: 1px solid rgb(200, 190, 190);
+    text-align: center;
+}
+
+.custom-form {
+
+    padding: 20px;
+    margin-top: 10px;
 }
